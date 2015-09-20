@@ -19,7 +19,7 @@ public class CommentDAO {
 		
 		try {
 			con = DBUtil.getConnection();
-			pstmt = con.prepareStatement("insert into comment_table values(?,?,seq_comm1.nextval,?,?,?)");
+			pstmt = con.prepareStatement("insert into comment_table values(?,?,sq_loc_1.nextval,?,?,?)");
 			
 			pstmt.setInt(1, comm.getArticle_number());
 			pstmt.setString(2,  comm.getNickname());
