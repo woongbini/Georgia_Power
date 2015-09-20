@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+    p{
+    
+    text-align : center;
+    }
+    	a{ 
+    		margin-top: 100px;
+    		margin-bottom: 100px;
+    		margin-right: 200px;
+    		margn-left: 200px;
+    	}
+    	.header {
+	background: rgba(0, 153, 255, 0.6);
+	color: white;
+	font-size: 100px;
+	font-family: "Nanum Brush Script";
+	text-align: center;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 8px;
+}
+	.logo_img{
+	
+	height:100px;
+}
+    </style>
+    <title>Login Demo - Kakao JavaScript SDK</title>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <!-- 민정씨꺼 css및 js파일 -->
+		    <link rel='stylesheet'
+			href="http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css">
+		<link rel='stylesheet'
+			href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+			<link rel="stylesheet"
+			href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+		<link href="<%=cp%>/css/bootstrap.min.css" rel="stylesheet">
+	<!-- 민정씨꺼 css및 js파일 -->
+  </head>
+  <body>
+  
+    	<div class="header">
+			<p >
+			<img class="logo_img" src="img/checkered12.png">
+				이 구역의 체육인은 나야
+			<img  class="logo_img" src="img/logo.png">
+			</p>
+		</div>
+		
+    	<div align = "center">
+    		<img src="img/mainpic.png">
+    	</div>
+    	<!-- style="vertical-align:middle" -->
+   	  	<div align="center">
+   	  	
+	   	  	<a href="javascript:loginWithKakao()" id="custom-login-btn">
+	   	  	<p>
+	   	  		<img src="img/login_btn/kakao_account_login_btn_large_wide.png" >
+	  		</p> 
+	   	  	</a>
+   	  	</div>
+    
+  
+	<script>
+		// 사용할 앱의 JavaScript 키를 설정해 주세요.
+		Kakao.init('2461f204fb3847512ad02bbdcab28375');
+		function loginWithKakao() {
+			// 로그인 창을 띄웁니다.
+			Kakao.Auth.login({
+				success : function(authObj) {
+					// 로그인 성공시, API
+					Kakao.API.request({
+						url : '/v1/user/me',
+						success : function(res) {
+							document.getElementById("kakao_key").setAttribute("value", res.id);
+							document.form1.submit();
+						},
+						fail : function(error) {
+							alert(JSON.stringify(error))
+						}
+					});
+				},
+				fail : function(err) {
+					alert(JSON.stringify(err))
+				}
+			});
+		};
+	</script>
+
+	<form name="form1" action="regist" method="post">
+		<input type="hidden" id="kakao_key" name="kakao_key"> <input type="hidden"
+			name="command" value="LoginCheck">
+	</form>
+</body>
+</html>

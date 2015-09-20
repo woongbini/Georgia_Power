@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>project01_01</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Controller</display-name>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>controller.Controller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>/mydb</url-pattern>
+  </servlet-mapping>
+  
+ <!-- 황제문 login xml -->
+  	<servlet>
+		<description></description>
+		<display-name>RegistController</display-name>
+		<servlet-name>RegistController</servlet-name>
+		<servlet-class>controller.RegistController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegistController</servlet-name>
+		<url-pattern>/regist</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>MainController</display-name>
+		<servlet-name>MainController</servlet-name>
+		<servlet-class>controller.MainController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MainController</servlet-name>
+		<url-pattern>/main</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ModiftFormServlet</display-name>
+		<servlet-name>ModiftFormServlet</servlet-name>
+		<servlet-class>member.servlet.ModiftFormServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModiftFormServlet</servlet-name>
+		<url-pattern>/ModiftFormServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ModifyFormServlet</display-name>
+		<servlet-name>ModifyFormServlet</servlet-name>
+		<servlet-class>member.servlet.ModifyFormServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifyFormServlet</servlet-name>
+		<url-pattern>/ModifyFormServlet</url-pattern>
+	</servlet-mapping>
+	
+  <!-- 황제문 login xml -->
+  <!-- 황제문 myinfo xml -->
+	  <servlet>
+	    <description></description>
+	    <display-name>InfoController</display-name>
+	    <servlet-name>InfoController</servlet-name>
+	    <servlet-class>controller.InfoController</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+	    <servlet-name>InfoController</servlet-name>
+	    <url-pattern>/editinfo</url-pattern>
+	  </servlet-mapping>
+  <!-- 황제문 myinfo xml -->
+  <!-- 신채연 xml -->
+			 <servlet>
+		    <description></description>
+		    <display-name>RateController</display-name>
+		    <servlet-name>RateController</servlet-name>
+		    <servlet-class>controller.RateController</servlet-class>
+		  </servlet>
+		  <servlet-mapping>
+		    <servlet-name>RateController</servlet-name>
+		    <url-pattern>/rate</url-pattern>
+		  </servlet-mapping>
+   <!-- 신채연 xml -->
+  
+  <servlet>
+    <description></description>
+    <display-name>sportController</display-name>
+    <servlet-name>sportController</servlet-name>
+    <servlet-class>controller.sportController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sportController</servlet-name>
+    <url-pattern>/sport</url-pattern>
+  </servlet-mapping>
+</web-app>
