@@ -21,8 +21,8 @@ public class DBUtil {
 
 	// 재사용 코드 -> 간결화
 	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE","testing","1234");
-		//return DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE","admin01","4321");
+		//return DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE","testing","1234");
+		return DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE","admin01","4321");
 		//return DriverManager.getConnection("Mysql@127.0.0.1:3306","root","1234");
 	}
 

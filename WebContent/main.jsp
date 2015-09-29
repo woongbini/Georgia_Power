@@ -169,7 +169,8 @@ body {
 		<div class="col-sm-2">
 			<!--  운동종목 카테고리 -->
 			<div class="row" id="floatMenu">
-				<div class="col-md-8">
+			
+			 	<div class="col-md-8">
 
 					<div class="list-group">
 						<a href="#" class="list-group-item active"
@@ -367,9 +368,10 @@ body {
 										지역 : ${regiLocationData.region}<br> 날짜:
 										${regiLocationData.regi_date}<br>
 									<p class="lead">
-										<button type="button" class="btn btn-default"
+										<button type="button" class="btn btn-default btn-block btn-sm"
 											data-toggle="collapse"
-											data-target="#loc_readMore${regiLocationData.article_number}">더보기</button>
+											data-target="#loc_readMore${regiLocationData.article_number}">
+											<span class="glyphicon glyphicon-collapse-down"></span>  더보기</button>
 									</p>
 									<div id="loc_readMore${regiLocationData.article_number}"
 										class="panel-collapse collapse ">
@@ -432,9 +434,10 @@ body {
 										지역 : ${regiPeopleData.region}<br> 날짜:
 										${regiPeopleData.regi_date}<br>
 									<p class="lead">
-										<button type="button" class="btn btn-default"
+										<button type="button" class="btn btn-default btn-block btn-sm"
 											data-toggle="collapse"
-											data-target="#pp_readMore${regiPeopleData.article_number}">더보기</button>
+											data-target="#pp_readMore${regiPeopleData.article_number}">
+											<span class="glyphicon glyphicon-collapse-down"></span>  더보기</button>
 									</p>
 									<div id="pp_readMore${regiPeopleData.article_number}"
 										class="panel-collapse collapse ">
@@ -524,8 +527,9 @@ body {
 			<hr>
 			<!--  하단 버튼(글쓰기) -->
 			<div class="col-md-3" style="float: left" id="testclick1">
-				<input type="button" class="btn btn-primary btn-block" value="글쓰기"
-					style="align: right">
+				<button type="button" class="btn btn-primary btn-md">
+					<span class="glyphicon glyphicon-pencil"> </span>  글쓰기
+				</button>
 			</div>
 		</div>
 
