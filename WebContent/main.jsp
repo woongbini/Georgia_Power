@@ -280,7 +280,7 @@ body {
 								<img class="img-rounded" src="img/IMG_0597.PNG">
 								<div class="caption text-center">
 									<h3>웅비니</h3>
-									<p>(양주시,야구)<br></p>
+									<p>(고양시 덕양구,축구)<br></p>
 										
 										
 										<div class="col-md-12">
@@ -431,7 +431,7 @@ body {
 									var="regiPeopleData">
 									<h2>${regiPeopleData.article_number}.${regiPeopleData.title}</h2>
 									<p>
-										지역 : ${regiPeopleData.region}<br> 날짜:
+										지역 : ${regiPeopleData.region} <br> 날짜:
 										${regiPeopleData.regi_date}<br>
 									<p class="lead">
 										<button type="button" class="btn btn-default btn-block btn-sm"
@@ -517,7 +517,7 @@ body {
 				<div class="panel-heading">알림</div>
 				<div class="panel-body">
 				 
-					항공대에서 농구 센터 1명 구합니다.
+					
 					<form action="rate" name="eval" method="post">
 					<input type="button" class="btn btn-primary" value="평가하기" onclick="submit();">
 					<input type="hidden" name="command" value="all">

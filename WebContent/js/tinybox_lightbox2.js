@@ -6,7 +6,6 @@ TINY2.box=function(){
 	var p,m,b,fn,ic,iu,iw,ih,ia,f=0;
 	return{
 		show:function(c,u,w,h,a,t){//1,700,600,1
-			alert('********');
 			if(!f){
 				p = document.createElement('iframe');
 				p.id = 'tinybox2';

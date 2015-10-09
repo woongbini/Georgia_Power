@@ -24,7 +24,7 @@ public class RegiPeopleDAO {
 			System.out.println("db연결 성공");
 			
 			// insert 문장만 실행가능한 객체 생성
-			pstmt = con.prepareStatement("insert into regi_people_table values(sq_loc_1.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			pstmt = con.prepareStatement("insert into regi_people_table values(seq_loc1.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 			// 데이터 대입 - ? 표기순으로 값 대입
 			pstmt.setString(1, regi.getTitle());
@@ -73,7 +73,7 @@ public class RegiPeopleDAO {
 
 		try {
 			con = DBUtil.getConnection();
-			pstmt = con.prepareStatement("select * from regi_people_table ");
+			pstmt = con.prepareStatement("select * from regi_people_table order by article_number desc");
 			// table 존재할 경우 무조건 정상반환, 데이터 존재 유무는 매소드 통해서 검증 필수
 			rset = pstmt.executeQuery();
 
